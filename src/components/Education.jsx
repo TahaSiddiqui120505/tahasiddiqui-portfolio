@@ -7,20 +7,21 @@ const Education = () => {
 
   const education = [
     {
-      institution: "Vignan's Institute of Information Technology",
+      institution: "Vasavi College of Engineering",
       degree: "Bachelor of Engineering",
-      field: "Computer Science and Engineering (CSE)",
-      period: "2022-2026"
+      field: "Electronics and Communication Engineering (ECE)",
+      period: "2019-2023"
     },
     {
-      institution: "Kendriya Vidyalaya No -2 SVN",
-      degree: "10+2",
-      period: ""
+      institution: "Sri Chaitanya Junior College",
+      degree: "Intermediate",
+      field: "MPC",
+      period: "2017-2019"
     }
   ];
 
   const achievements = [
-    "Winner – IWD Hackathon by Google Developer Group Vizag",
+    "Winner – IWD Hackathon by Google Developer Group Hyderabad",
     "4* Coder on CodeChef, solved 600+ DSA problems across platforms like LeetCode, CodeChef, and CSES",
     "CodeChef Student Chapter & GDG CP Lead – Led competitive programming events and workshops",
     "National Handball Goalkeeper – Kendriya Vidyalaya",
@@ -46,7 +47,7 @@ const Education = () => {
   return (
     <section id="education" className="section-padding bg-primary">
       <div className="container-custom" ref={ref}>
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
@@ -58,7 +59,7 @@ const Education = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <motion.div 
+          <motion.div
             className="md:col-span-2"
             variants={containerVariants}
             initial="hidden"
@@ -68,11 +69,11 @@ const Education = () => {
               <div className="w-4 h-4 border border-light mr-3"></div>
               Education
             </h3>
-            
+
             <div className="space-y-8">
               {education.map((edu, i) => (
-                <motion.div 
-                  key={i} 
+                <motion.div
+                  key={i}
                   className="border-l-2 border-muted border-opacity-30 pl-6 relative"
                   variants={itemVariants}
                 >
@@ -84,7 +85,7 @@ const Education = () => {
               ))}
             </div>
           </motion.div>
-          
+
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -94,11 +95,11 @@ const Education = () => {
               <div className="w-4 h-4 border border-light mr-3"></div>
               Achievements
             </h3>
-            
+
             <ul className="space-y-4">
               {achievements.map((achievement, i) => (
-                <motion.li 
-                  key={i} 
+                <motion.li
+                  key={i}
                   className="flex items-start"
                   variants={itemVariants}
                 >
@@ -108,13 +109,13 @@ const Education = () => {
               ))}
             </ul>
 
-            <motion.div 
+            <motion.div
               className="mt-8 p-4 border border-muted border-opacity-20 bg-secondary bg-opacity-30"
               variants={itemVariants}
             >
               <h4 className="text-sm font-medium mb-2">Continuous Learning</h4>
               <p className="text-muted text-sm">
-                Always exploring new technologies and participating in hackathons 
+                Always exploring new technologies and participating in hackathons
                 to expand my knowledge and practical experience.
               </p>
             </motion.div>
