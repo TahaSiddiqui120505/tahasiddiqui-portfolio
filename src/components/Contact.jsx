@@ -23,7 +23,6 @@ const Contact = () => {
     const fieldName = e.target.name;
     const fieldValue = e.target.value;
 
-    // Map form field names to state property names
     const stateMapping = {
       'name': 'name',
       'email': 'email',
@@ -40,26 +39,22 @@ const Contact = () => {
     e.preventDefault();
     setStatus({ submitting: true, submitted: false, error: null });
 
-    // Format the current date and time in UTC as YYYY-MM-DD HH:MM:SS
     const now = new Date();
     const formattedDate = now.toISOString().replace('T', ' ').substring(0, 19);
 
-    // EmailJS configuration
     const serviceId = import.meta.env.VITE_SERVICE_ID;
     const templateId = import.meta.env.VITE_TEMPLATE_ID;
     const publicKey = import.meta.env.VITE_PUBLIC_KEY;
 
-    // Initialize EmailJS with your public key
     emailjs.init(publicKey);
 
-    // Prepare form data for EmailJS
     const templateParams = {
       from_name: formData.name,
       from_email: formData.email,
       message: formData.message,
-      to_email: 'goudnithin77@gmail.com',
+      to_email: 'siddiquitaha120@gmail.com',
       date_time: formattedDate,
-      user_login: 'nithinmanda'
+      user_login: 'tahasiddiqui'
     };
 
     emailjs.send(serviceId, templateId, templateParams)
@@ -144,7 +139,7 @@ const Contact = () => {
                 <div>
                   <h4 className="font-medium text-sm mb-1">Email</h4>
                   <a href="mailto:goudnithin77@gmail.com" className="text-muted hover:text-light transition-colors">
-                    goudnithin77@gmail.com
+                    siddiquitaha120@gmail.com
                   </a>
                 </div>
               </motion.div>
@@ -161,7 +156,7 @@ const Contact = () => {
                 <div>
                   <h4 className="font-medium text-sm mb-1">Phone</h4>
                   <a href="tel:+919912491246" className="text-muted hover:text-light transition-colors">
-                    +91 9912491246
+                    +91 9930743192
                   </a>
                 </div>
               </motion.div>

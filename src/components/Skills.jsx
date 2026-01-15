@@ -5,24 +5,24 @@ const Skills = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
-  const categories = [
-    {
-      name: "Frontend",
-      skills: ["React.js", "React Native", "Next.js", "TypeScript", "JavaScript", "HTML", "CSS", "Tailwind CSS"]
-    },
-    {
-      name: "Backend",
-      skills: ["Node.js", "Express.js", "Python", "C++", "REST APIs", "WebSockets"]
-    },
-    {
-      name: "Database",
-      skills: ["SQL", "Prisma", "MongoDB", "DynamoDB", "PostgreSQL"]
-    },
-    {
-      name: "DevOps & Tools",
-      skills: ["AWS Lambda", "Git", "BeautifulSoup", "Google Gemini API"]
-    }
-  ];
+const categories = [
+  {
+    name: "Frontend",
+    skills: ["React.js", "JavaScript (ES6+)", "HTML5", "CSS3", "Tailwind CSS", "Vite"]
+  },
+  {
+    name: "Backend & APIs",
+    skills: ["Node.js", "Express.js", "REST APIs", "JWT Authentication", "Multer", "CRUD Operations"]
+  },
+  {
+    name: "Databases & Tools",
+    skills: ["MongoDB", "Schema Design", "Git", "GitHub", "Postman", "VS Code"]
+  },
+  {
+    name: "Emerging Tech & AI",
+    skills: ["Generative AI", "LLMs", "RAG", "LangChain", "LangGraph", "Python"]
+  }
+];
 
   const containerVariants = {
     hidden: { opacity: 0 },
